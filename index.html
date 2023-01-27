@@ -24,37 +24,44 @@
 
 
 
-
-.menu > li > a{
+.menu  li  a{
 	display: block;
-	padding: 15px 20px;
-	color: #353535;
+	color: #ffffff;
 	font-family: 'Open sans';
 	text-decoration: none;
+    
 }
 
 .menu li a:hover{
-	color: #CE7D35;
-	transition: all .3s;
+	transition: all .3s;background-color: var(--grey);
+    width: 100%;
+    
 }
+
 
 /* Submenu*/
 
 .submenu{
 	position: absolute;
-	background: #333333;
-	width: 120%;
+	width: 100%;
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity 1.5s;
+    background-color:  var(--white);
+    text-align: center;
+    
 }
 
 .submenu li a{
-	display: block;
-	padding: 15px;
-	color: #fff;
+    text-align: center;
+    padding: 4px;
+	color: var(--black);
 	font-family: 'Open sans';
-	text-decoration: none;
+    text-decoration: none;
+}
+
+.menu:hover .submenu {
+    display: block;
 }
 
 .menu li:hover .submenu{
@@ -81,10 +88,11 @@
     <!-- Menu -->
     <nav class="nav">
         <ul class="menu">
+            <!--
             <li class="subnav" >
                 <a class="subnavbtn" >Categorias <i class="fa fa-caret-down"></i></a>
                 <div class="subnav-content">
-			<li> <a href="#">Boligrafos</a> </li>
+                    <a href="#">Boligrafos</a>
                     <a href="#">Borradores y tajalapis</a>
                     <a href="#">Colores</a>
                     <a href="#">Lapices</a>
@@ -98,6 +106,7 @@
                     <a href="#">Otros</a>
                 </div>
             </li>
+        -->
             <li><a href="#">Contactenos</a></li>
             <li><a href="#">Entregas</a> </li>
             
@@ -105,16 +114,22 @@
         </ul>
 
         <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Servicios</a>
+            <li><a href="#">Categorias</a>
                 <ul class="submenu">
-                    <li><a href="#">Servicio #1</a></li>
-                    <li><a href="#">Servicio #2</a></li>
-                    <li><a href="#">Servicio #3</a></li>
+                    <li><a href="#">Boligrafos</a></li>
+                    <li><a href="#">Borradores y tajalapis</a></li>
+                    <li><a href="#">Colores</a></li>
+                    <li><a href="#">Lapices</a></li>
+                    <li><a href="#">Marcadores</a></li>
+                    <li><a href="#">Resaltadores</a></li>
+                    <li><a href="#">Cuadernos</a></li>
+                    <li><a href="#">Cartucheras</a></li>
+                    <li><a href="#">Carpetas</a></li>
+                    <li><a href="#">Clips y ganchos</a></li>
+                    <li><a href="#">Laveros y portacarnets</a></li>
+                    <li><a href="#">Otros</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
     <p class="barra"   style="height:auto; text-align: center; text-transform: uppercase;">
