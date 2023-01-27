@@ -7,6 +7,8 @@
     --grey: rgb(251, 103, 177);
 }
 
+
+
 /* Reset */
 *{
     margin: 0;
@@ -51,7 +53,9 @@ ul{
     height: 100%;
     position: fixed;
     background-color: var(--black);
-    overflow: hidden;
+    
+    height: calc(100% - 80px);
+    overflow: scroll;
     
 }
 
@@ -162,7 +166,6 @@ ul{
     .menu a:hover{
         background-color: transparent;
         color: var(--grey);
-        
     }
     
     .hamb{
@@ -170,12 +173,13 @@ ul{
     }
 
 }
+
 /* Sub nav */
 .subnav-content {
     background-color:  var(--white);
     width: 100%;
     z-index: 1;
-    padding: 20px 0 ;
+    padding: 15px 20px;
     display: none;
   }
 .subnav-content a {
