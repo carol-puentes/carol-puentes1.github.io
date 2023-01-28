@@ -1,0 +1,36 @@
+
+   
+
+
+
+
+#fondo{
+     
+     background-image: url(../img/gaseosa.jpg);
+     background-repeat: no-repeat;
+     justify-content: space-between;
+     background-size: cover;
+     /*background-attachment: fixed;*/
+}
+
+#wrap{
+     justify-content: space-between;
+     backdrop-filter:blur(4px)
+     
+}
+#tamañofoto{
+     
+     height: 450px;
+     padding: 20px;
+}
+#color{
+     background-color:#FFAF01
+}
+
+.boton{
+     background-color: #ffffff4b;
+     color: #000000;
+}
+
+
+     
