@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- App title -->
+    <title>Responsive Pure CSS Menu</title>
+
+    <!-- Link css file -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
+
+    
+    <style>
+        .barra{
+     background-color:rgba(255 0 127);
+     box-shadow: 2px 2px 5px rgb(216, 99, 158); /* Efecto sombra debajo del menú */
+     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     font-size:15px;
+     /* -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #000000; */
+}
+
+
+
+
+
+.menu1  li  a{
+	display: block;
+	color: #ffffff;
+	font-family: 'Open sans';
+	text-decoration: none;
+    
+}
+
+.menu1 li a:hover{
+	/*transition: all .3s;background-color: var(--grey);*/
+    width: 100%;
+    
+}
+
+
+/* Submenu*/
+
+.submenu{
+    display: none;
+	position: absolute;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+    background-color:  var(--white);
+    text-align: center;
+}
+
+.submenu li a{
+   /* text-align: center;
+    padding: 4px;*/
+	color: var(--black);
+	font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.menu:hover .submenu {
+    /*display: block;*/
+    display:grid;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+    </style>
+</head>
+<!-- Navigation bar -->
+
+<header class="header">
+    <!-- Logo -->
+    
+    <a style=" font-family:'Pacifico', cursive; font-size: 10px;" > 
+        <img src="img2/logo.jpg" alt="Landing" style="width:150px; height:100px">
+          
+    </a>
+
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"  data-target="#nav"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+            <!--
+            <li class="subnav" >
+                <a class="subnavbtn" >Categorias <i class="fa fa-caret-down"></i></a>
+                <div class="subnav-content">
+                    <a href="#">Boligrafos</a>
+                    <a href="#">Borradores y tajalapis</a>
+                    <a href="#">Colores</a>
+                    <a href="#">Lapices</a>
+                    <a href="#">Resaltadores</a>
+                    <a href="#">Marcadores</a>
+                    <a href="#">Cuadernos</a>
+                    <a href="#">Cartucheras</a>
+                    <a href="#">Carpetas</a>
+                    <a href="#">Clips y ganchos</a>
+                    <a href="#">LLaveros y portacarnets</a>
+                    <a href="#">Otros</a>
+                </div>
+            </li>
+        -->
+            <li><a href="#">Contactenos</a></li>
+            <li><a href="#">Entregas</a> </li>
+            
+            <li class="oculto"><a href="#">Categorias</a>
+                <ul class="submenu">
+                    <li><a href="#">Boligrafos</a></li>
+                    <li><a href="#">Borradores y tajalapis</a></li>
+                    <li><a href="#">Colores</a></li>
+                    <li><a href="#">Lapices</a></li>
+                    <li><a href="#">Marcadores</a></li>
+                    <li><a href="#">Resaltadores</a></li>
+                    <li><a href="#">Cuadernos</a></li>
+                    <li><a href="#">Cartucheras</a></li>
+                    <li><a href="#">Carpetas</a></li>
+                    <li><a href="#">Clips y ganchos</a></li>
+                    <li><a href="#">Laveros y portacarnets</a></li>
+                    <li><a href="#">Otros</a></li>
+                    <li><a href="#">
+                        <img src="/img2/logo.jpg" alt="Landing" style="width:150px; height:100px">
+                    </a></li>
+                </ul>
+            </li>      
+            
+        </ul>
+
+    </nav>
+    <p class="barra"   style="height:auto; text-align: center; text-transform: uppercase;">
+        Si eres amante a la papeleria  o necesitas algun implemento este es el lugar ideal para ti
+   </p>
+   
+</header>
+<body>
+    
+
+    <div style="background:white" id='productos' >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4" style="height:600px; width: 100%;">
+                        <div class=" text-center" id='productos'>
+                            <img  src="img2/cartuchera.jpg"  alt=" Imagen del Producto" style="height:300px"  />
+                            <h3 style="font-Size:37px"> De pollo</h3>
+                            <p  style="color:#FFAF00; font-Size:30px">$3.000 </p>
+                            <a href="https://api.whatsapp.com/send/?phone=573134281642&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-warning btn-lg boton ">
+                                Ordenar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="height:600px">
+                        <div class=" text-center" id='productos'>
+                            <img  src="img2/cartuchera.jpg"  alt=" Imagen del Producto" style="height:300px"  />
+                            <h3 style="font-Size:37px"> De pollo</h3>
+                            <p  style="color:#FFAF00; font-Size:30px">$3.000 </p>
+                            <a href="https://api.whatsapp.com/send/?phone=573134281642&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-warning btn-lg boton ">
+                                Ordenar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="height:600px">
+                        <div class=" text-center" id='productos'>
+                            <img  src="img2/cartuchera.jpg"  alt=" Imagen del Producto" style="height:300px"  />
+                            <h3 style="font-Size:37px"> De pollo</h3>
+                            <p  style="color:#FFAF00; font-Size:30px">$3.000 </p>
+                            <a href="https://api.whatsapp.com/send/?phone=573134281642&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-warning btn-lg boton ">
+                                Ordenar
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>  
+                <div class="row">
+                    <div class="col-md-6" style="height:600px">
+                        <div class=" text-center" id='productos'>
+                            <img  src="img2/lapicero.jpg"  alt=" Imagen del Producto" style="height:300px"  />
+                            <h3 style="fontSize:37px">De carne</h3>
+                            <p  style="color:#FFAF00; fontSize:30px">$3.000 </p>
+                            <a href="https://api.whatsapp.com/send/?phone=573134281642&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-warning btn-lg boton">
+                                Ordenar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="height:600px">
+                        <div class=" text-center" id='productos' style="height:80%">
+                        <img  src={chicharron}  alt=" Imagen del Producto" style="height:300px"  />
+                            <h3 style="fontSize:37px">De chicharron</h3>
+                            <p  style="color:#FFAF00 ;fontSize:30px">$3.000 </p>
+                            <a href="https://api.whatsapp.com/send/?phone=573134281642&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-warning btn-lg boton">
+                                Ordenar
+                            </a>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+    </div>
+
+    <script></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
